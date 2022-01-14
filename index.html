@@ -17,19 +17,19 @@
   <title>Midbank</title>
 </head>
 
-<body class="bg-primary text-white flex flex-col scroll-smooth">
+<body class="bg-primary text-white flex flex-col scroll-smooth select-none">
   <!-- <HEADER> -->
   <div class="w-full bg-darkestBlue">
     <header
-      class="container m-auto p-4 md:p-8 font-primary grid grid-cols-header text-center items-center md:flex md:justify-between">
+      class="container m-auto p-4 font-primary grid grid-cols-header text-center items-center md:flex md:justify-between">
       <ion-icon name="menu" class="text-2xl md:hidden"></ion-icon>
       <div class="font-black text-xl sm:text-2xl">MidBank</div>
       <div class="hidden md:flex lg:gap-12 font-semibold md:gap-4">
-        <a href="#" class="opacity-60 hover:opacity-100">Product</a>
-        <a href="#" class="opacity-60 hover:opacity-100">About</a>
-        <a href="#" class="opacity-60 hover:opacity-100">FAQ</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Service</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Blog</a>
+        <a href="#" class="opacity-60 hover:opacity-100">Home</a>
+        <a href="#about" class="opacity-60 hover:opacity-100">About</a>
+        <a href="#services" class="opacity-60 hover:opacity-100">Services</a>
+        <a href="#app" class="opacity-60 hover:opacity-100">Mobile App</a>
+        <a href="#contact" class="opacity-60 hover:opacity-100">Contact</a>
       </div>
       <a href="#"
         class="border-2 flex justify-center items-center gap-2 font-semibold py-1 md:px-4 md:py-2 rounded-full hover:bg-gradient-to-b hover:from-lightBlue hover:to-darkBlue hover:border-lightBlue">
@@ -86,7 +86,7 @@
     </section>
     <!-- </FEATURES> -->
     <!-- <ABOUT> -->
-    <section class="grid grid-cols-1 mt-20 items-center md:grid-cols-2">
+    <section id="about" class="scroll-mt-20 grid grid-cols-1 mt-20 items-center md:grid-cols-2">
       <img srcset="./src/images/image05.png 2x" alt="image" />
       <div>
         <h4 class="text-orange font-bold mt-8 md:mt-0">ABOUT US</h4>
@@ -105,7 +105,7 @@
     </section>
     <!-- </ABOUT> -->
     <!-- <SERVICES> -->
-    <section class="flex flex-col mt-20 md:items-center">
+    <section id="services" class="scroll-mt-20 flex flex-col mt-20 md:items-center">
       <h4 class="text-orange font-bold">SERVICE</h4>
       <h2 class="text-4xl font-bold">Choose Best Service From Our List</h2>
       <p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
@@ -186,7 +186,8 @@
     </section>
     <!-- </SERVICES> -->
     <!-- <APP> -->
-    <section class="grid grid-cols-1 md:grid-cols-2 mt-20 bg-white/10 px-4 py-20 lg:p-20 rounded-lg">
+    <section id="app"
+      class="-scroll-mt-8 grid grid-cols-1 md:grid-cols-2 mt-20 bg-white/10 px-4 py-20 lg:p-20 rounded-lg">
       <div class="flex flex-col justify-center">
         <h2 class="text-4xl font-bold">Secure Way To Buy And Sell From Your Mobile App</h2>
         <p class="opacity-60 mt-4">
@@ -237,13 +238,15 @@
     </section>
     <!-- </TESTIMONIAL> -->
     <!-- <CONTACT> -->
-    <section class="mt-20 bg-white/10 flex flex-col items-center p-4 md:p-20 rounded-lg lg:mx-20">
+    <section id="contact"
+      class="scroll-mt-8 mt-20 bg-white/10 flex flex-col items-center p-4 md:p-20 rounded-lg lg:mx-20">
       <h2 class="text-4xl font-bold">Subscribe Newsletter</h2>
       <p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
       <div class="mt-8 md:mt-20 flex flex-col md:flex-row gap-4 text-center">
         <input type="text" placeholder="Enter your email"
           class="p-4 rounded-full border-2 border-lightBlue sm:min-w-[20rem] outline-none bg-transparent" />
-        <a href="#" class="px-8 py-4 bg-gradient-to-b from-lightBlue to-darkBlue rounded-full font-semibold">Get
+        <a href="#"
+          class="w-fit font-semibold flex items-center gap-2 px-4 py-4 rounded-full border-lightBlue border-2 bg-gradient-to-b from-lightBlue to-darkBlue hover:from-transparent hover:to-transparent">Get
           Started</a>
       </div>
     </section>
@@ -254,20 +257,16 @@
         <div class="font-black text-xl sm:text-2xl">MidBank</div>
         <p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
         <div class="mt-4 flex gap-4">
-          <a href="#"
-            class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center transition duration-300">
+          <a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
             <img srcset="./src/images/image14.png 2x" alt="image" />
           </a>
-          <a href="#"
-            class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center transition duration-300">
+          <a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
             <img srcset="./src/images/image15.png 2x" alt="image" />
           </a>
-          <a href="#"
-            class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center transition duration-300">
+          <a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
             <img srcset="./src/images/image16.png 2x" alt="image" />
           </a>
-          <a href="#"
-            class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center transition duration-300">
+          <a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
             <img srcset="./src/images/image17.png 2x" alt="image" />
           </a>
         </div>
