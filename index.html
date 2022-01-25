@@ -1,310 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./src/images/icon.svg" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<link rel="stylesheet" href="./src/styles/main.min.css" />
+		<title>Midbank</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./src/images/icon.svg" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <link rel="stylesheet" href="./src/styles/main.min.css" />
-  <title>Midbank</title>
-</head>
+	<body class="bg-primary text-white flex flex-col select-none">
+		<!-- <HEADER> -->
+		<div class="w-full bg-darkestBlue">
+			<header
+				class="container m-auto p-4 font-primary grid grid-cols-header text-center items-center md:flex md:justify-between"
+			>
+				<ion-icon name="menu" class="text-2xl md:hidden" id="menuIcon"></ion-icon>
+				<div class="font-black text-xl sm:text-2xl">MidBank</div>
+				<div
+					class="fixed flex flex-col top-0 left-0 bottom-0 right-1/4 items-start p-20 gap-8 text-3xl z-10 bg-gradient-to-r from-black to-transparent transform -translate-x-full md:relative md:bg-none md:flex-row md:text-base md:p-0 md:gap-4 md:translate-x-0 lg:gap-12 font-semibold"
+					id="menu"
+				>
+					<a href="#" class="opacity-60 hover:opacity-100">Home</a>
+					<a href="#about" class="opacity-60 hover:opacity-100">About</a>
+					<a href="#services" class="opacity-60 hover:opacity-100">Services</a>
+					<a href="#app" class="opacity-60 hover:opacity-100">Mobile App</a>
+					<a href="#contact" class="opacity-60 hover:opacity-100">Contact</a>
+					<ion-icon
+						name="close"
+						class="opacity-60 hover:opacity-100 absolute top-5 left-7 md:hidden"
+						id="closeIcon"
+					></ion-icon>
+				</div>
+				<a
+					href="#"
+					class="border-2 flex justify-center items-center gap-2 font-semibold py-1 md:px-4 md:py-2 rounded-full hover:bg-gradient-to-b hover:from-lightBlue hover:to-darkBlue hover:border-lightBlue"
+				>
+					<span class="hidden md:block">Sign in</span>
+					<ion-icon name="log-in-outline" class="text-2xl"></ion-icon>
+				</a>
+			</header>
+		</div>
+		<!-- </HEADER> -->
+		<div class="container m-auto p-4 md:p-8">
+			<!-- <HERO> -->
+			<section class="grid grid-cols-1 md:grid-cols-2 md:mt-20">
+				<img srcset="./src/images/image01.png 2x" alt="image" />
+				<div class="flex flex-col justify-center">
+					<h1 class="text-3xl lg:text-6xl font-bold sm:text-5xl">Stronger Banking, Greater Service</h1>
+					<p class="mt-8 opacity-60">
+						Get the most accurate market data, alerts, conversions, tools and more — all within the same app.
+					</p>
+					<div class="mt-20 flex gap-4 flex-col text-center items-center sm:flex-row">
+						<a
+							href="#"
+							class="w-fit font-semibold flex items-center gap-2 px-4 py-4 rounded-full border-lightBlue border-2 bg-gradient-to-b from-lightBlue to-darkBlue hover:from-transparent hover:to-transparent hover:border-white"
+							>Start Transaction</a
+						>
+						<a
+							href="#"
+							class="w-fit border-2 flex items-center gap-2 font-semibold px-4 py-4 rounded-full hover:bg-gradient-to-b hover:from-lightBlue hover:to-darkBlue hover:border-lightBlue"
+						>
+							<ion-icon name="cloud-download-outline" class="text-2xl"></ion-icon>
+							<span>Download App</span>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- </HERO> -->
+			<!-- <FEATURES> -->
+			<section class="flex flex-col items-center gap-8 mt-20 md:flex-row md:justify-around">
+				<div class="w-56 flex flex-col items-center text-center">
+					<div class="w-40 aspect-square flex justify-center items-center bg-lightBlue/10 rounded-lg">
+						<img srcset="./src/images/image02.png 2x" alt="image" />
+					</div>
+					<h3 class="mt-8 font-bold text-xl lg:text-2xl">Create an Account</h3>
+					<p class="opacity-60 mt-2">We realize ideas from simple to complex.</p>
+				</div>
+				<div class="w-56 flex flex-col items-center text-center">
+					<div class="w-40 aspect-square flex justify-center items-center bg-lightBlue/10 rounded-lg">
+						<img srcset="./src/images/image03.png 2x" alt="image" />
+					</div>
+					<h3 class="mt-8 font-bold text-xl lg:text-2xl">Attach Master Card</h3>
+					<p class="opacity-60 mt-2">Attach master card ideas from everything becomes.</p>
+				</div>
+				<div class="w-56 flex flex-col items-center text-center">
+					<div class="w-40 aspect-square flex justify-center items-center bg-lightBlue/10 rounded-lg">
+						<img srcset="./src/images/image04.png 2x" alt="image" />
+					</div>
+					<h3 class="mt-8 font-bold text-xl lg:text-2xl">Send money</h3>
+					<p class="opacity-60 mt-2">Send money ideas from simple to complex.</p>
+				</div>
+			</section>
+			<!-- </FEATURES> -->
+			<!-- <ABOUT> -->
+			<section id="about" class="scroll-mt-20 grid grid-cols-1 mt-20 items-center md:grid-cols-2">
+				<img srcset="./src/images/image05.png 2x" alt="image" />
+				<div>
+					<h4 class="text-orange font-bold mt-8 md:mt-0">ABOUT US</h4>
+					<h2 class="text-4xl font-bold">Wanna Know About MidBank Mobile Banking</h2>
+					<p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
+					<p class="opacity-60 mt-4">
+						Mobile banking is the act of making financial Money transactions on a mobile device (cell phone, tablet,
+						etc.).
+					</p>
+					<p class="opacity-60 mt-4">
+						This activity can be as simple as a bank sending fraud or usage activity to a client's cell phone or as
+						complex as a client paying bills or sending money abroad.
+					</p>
+					<h4 class="text-orange font-bold mt-4">LEARN MORE</h4>
+				</div>
+			</section>
+			<!-- </ABOUT> -->
+			<!-- <SERVICES> -->
+			<section id="services" class="scroll-mt-20 flex flex-col mt-20 md:items-center">
+				<h4 class="text-orange font-bold">SERVICE</h4>
+				<h2 class="text-4xl font-bold">Choose Best Service From Our List</h2>
+				<p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
+				<div
+					class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 md:grid-cols-2 md:mt-20 md:gap-12 transition duration-150 ease-out hover:ease-in"
+				>
+					<div
+						class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black"
+					>
+						<div
+							class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-red-500 group-hover:bg-red-100"
+						>
+							<img srcset="./src/images/image06.png 2x" alt="image" />
+						</div>
+						<h3 class="my-4 font-bold text-2xl">Personal Loan</h3>
+						<p class="text-gray-400 group-hover:text-black">
+							We realized ideas from simple to complex.
+							<a href="#" class="text-orange font-semibold">Read More</a>
+						</p>
+					</div>
+					<div
+						class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black"
+					>
+						<div
+							class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-blue-500 group-hover:bg-blue-100"
+						>
+							<img srcset="./src/images/image07.png 2x" alt="image" />
+						</div>
+						<h3 class="my-4 font-bold text-2xl">Business Loan</h3>
+						<p class="text-gray-400 group-hover:text-black">
+							We realized ideas from simple to complex.
+							<a href="#" class="text-orange font-semibold">Read More</a>
+						</p>
+					</div>
+					<div
+						class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black"
+					>
+						<div
+							class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-cyan-500 group-hover:bg-cyan-50"
+						>
+							<img srcset="./src/images/image08.png 2x" alt="image" />
+						</div>
+						<h3 class="my-4 font-bold text-2xl">Online Deposit</h3>
+						<p class="text-gray-400 group-hover:text-black">
+							We realized ideas from simple to complex.
+							<a href="#" class="text-orange font-semibold">Read More</a>
+						</p>
+					</div>
+					<div
+						class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black"
+					>
+						<div
+							class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-indigo-500 group-hover:bg-indigo-100"
+						>
+							<img srcset="./src/images/image09.png 2x" alt="image" />
+						</div>
+						<h3 class="my-4 font-bold text-2xl">Mobile Banking</h3>
+						<p class="text-gray-400 group-hover:text-black">
+							We realized ideas from simple to complex.
+							<a href="#" class="text-orange font-semibold">Read More</a>
+						</p>
+					</div>
+					<div
+						class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black"
+					>
+						<div
+							class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-purple-500 group-hover:bg-purple-100"
+						>
+							<img srcset="./src/images/image10.png 2x" alt="image" />
+						</div>
+						<h3 class="my-4 font-bold text-2xl">Credit Card</h3>
+						<p class="text-gray-400 group-hover:text-black">
+							We realized ideas from simple to complex.
+							<a href="#" class="text-orange font-semibold">Read More</a>
+						</p>
+					</div>
+					<div
+						class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black"
+					>
+						<div
+							class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-amber-500 group-hover:bg-amber-100"
+						>
+							<img srcset="./src/images/image11.png 2x" alt="image" />
+						</div>
+						<h3 class="my-4 font-bold text-2xl">Education Loan</h3>
+						<p class="text-gray-400 group-hover:text-black">
+							We realized ideas from simple to complex.
+							<a href="#" class="text-orange font-semibold">Read More</a>
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- </SERVICES> -->
+			<!-- <APP> -->
+			<section
+				id="app"
+				class="-scroll-mt-8 grid grid-cols-1 md:grid-cols-2 mt-20 bg-white/10 px-4 py-20 lg:p-20 rounded-lg"
+			>
+				<div class="flex flex-col justify-center">
+					<h2 class="text-4xl font-bold">Secure Way To Buy And Sell From Your Mobile App</h2>
+					<p class="opacity-60 mt-4">
+						Gemini is a licensed New York trust company that monday under regular bank exams and is subject to the
+						cybersecurity audits conducted by the New York.
+					</p>
+					<div class="mt-8 md:mt-20 flex flex-col justify-center items-center gap-4 sm:flex-row">
+						<a
+							href="#"
+							class="border-2 flex items-center gap-2 font-semibold px-4 py-2 rounded-full hover:bg-gradient-to-b hover:from-lightBlue hover:to-darkBlue hover:border-lightBlue"
+						>
+							<ion-icon name="logo-apple-appstore" class="text-4xl"></ion-icon>
+							<span>App Store</span>
+						</a>
+						<a
+							href="#"
+							class="font-semibold flex items-center gap-2 px-4 py-2 rounded-full border-lightBlue border-2 bg-gradient-to-b from-lightBlue to-darkBlue hover:from-transparent hover:to-transparent hover:border-white"
+						>
+							<ion-icon name="logo-google-playstore" class="text-4xl"></ion-icon>
+							<span>Play Store</span>
+						</a>
+					</div>
+				</div>
+				<div class="flex justify-center mt-8 md:mt-0">
+					<img srcset="./src/images/image12.png 2x" alt="image" />
+				</div>
+			</section>
+			<!-- </APP> -->
+			<!-- <TESTIMONIAL> -->
+			<section class="grid grid-cols-1 md:grid-cols-testimonial items-center mt-20">
+				<a href="#" class="hidden md:block text-4xl text-darkBlue hover:text-white">
+					<ion-icon name="arrow-back-circle"></ion-icon>
+				</a>
+				<div class="flex justify-center p-8">
+					<img srcset="./src/images/image13.png 2x" alt="image" />
+				</div>
+				<div>
+					<h4 class="text-orange font-bold mt-8">TESTIMONIAL</h4>
+					<h2 class="text-4xl font-bold">Love Of Our Customers</h2>
+					<p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
+					<p class="opacity-60 mt-4">
+						In promotion and advertising, a testimonial or show consists of a person's written or spoken statement
+						extolling the virtue of a product. The term "testimonial" most commonly applies to the sales-pitches
+						attributed to ordinary citizens, whereas the word "endorsement" usually applies to pitches by celebrities.
+					</p>
+					<p class="mt-4 md:mt-20 font-semibold text-xl">Justin Pierre</p>
+					<p class="opacity-60">UX/UI Designer</p>
+				</div>
+				<a href="#" class="hidden md:flex text-4xl justify-end text-darkBlue hover:text-white">
+					<ion-icon name="arrow-forward-circle"></ion-icon>
+				</a>
+			</section>
+			<!-- </TESTIMONIAL> -->
+			<!-- <CONTACT> -->
+			<section
+				id="contact"
+				class="scroll-mt-8 mt-20 bg-white/10 flex flex-col items-center p-4 md:p-20 rounded-lg lg:mx-20"
+			>
+				<h2 class="text-4xl font-bold">Subscribe Newsletter</h2>
+				<p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
+				<div class="mt-8 md:mt-20 flex flex-col md:flex-row gap-4 text-center">
+					<input
+						type="text"
+						placeholder="Enter your email"
+						class="p-4 rounded-full border-2 border-lightBlue sm:min-w-[20rem] outline-none bg-transparent"
+					/>
+					<a
+						href="#"
+						class="w-fit font-semibold flex items-center gap-2 px-4 py-4 rounded-full border-lightBlue border-2 bg-gradient-to-b from-lightBlue to-darkBlue hover:from-transparent hover:to-transparent"
+						>Get Started</a
+					>
+				</div>
+			</section>
+			<!-- </CONTACT> -->
+			<!-- <FOOTER> -->
+			<footer class="mt-20 grid grid-cols-1 gap-12 md:grid-cols-footer">
+				<div>
+					<div class="font-black text-xl sm:text-2xl">MidBank</div>
+					<p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
+					<div class="mt-4 flex gap-4">
+						<a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
+							<img srcset="./src/images/image14.png 2x" alt="image" />
+						</a>
+						<a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
+							<img srcset="./src/images/image15.png 2x" alt="image" />
+						</a>
+						<a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
+							<img srcset="./src/images/image16.png 2x" alt="image" />
+						</a>
+						<a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
+							<img srcset="./src/images/image17.png 2x" alt="image" />
+						</a>
+					</div>
+				</div>
+				<div class="flex flex-col gap-4">
+					<h3 class="font-bold text-xl">Product</h3>
+					<a href="#" class="opacity-60 hover:opacity-100">Career</a>
+					<a href="#" class="opacity-60 hover:opacity-100">About Us</a>
+					<a href="#" class="opacity-60 hover:opacity-100">Insights</a>
+					<a href="#" class="opacity-60 hover:opacity-100">PCI Compliance</a>
+					<a href="#" class="opacity-60 hover:opacity-100">Integrations</a>
+					<a href="#" class="opacity-60 hover:opacity-100">Pricing</a>
+				</div>
+				<div class="flex flex-col gap-4">
+					<h3 class="font-bold text-xl">Service</h3>
+					<a href="#" class="opacity-60 hover:opacity-100">Docs</a>
+					<a href="#" class="opacity-60 hover:opacity-100">Knowledge Base</a>
+					<a href="#" class="opacity-60 hover:opacity-100">System Status</a>
+					<a href="#" class="opacity-60 hover:opacity-100">Tutorials</a>
+					<a href="#" class="opacity-60 hover:opacity-100">Security</a>
+				</div>
+				<div class="flex flex-col gap-4">
+					<h3 class="font-bold text-xl">FAQ</h3>
+					<a href="#" class="opacity-60 hover:opacity-100">About</a>
+					<a href="#" class="opacity-60 hover:opacity-100">Leadership</a>
+					<a href="#" class="opacity-60 hover:opacity-100">Press/News</a>
+					<a href="#" class="opacity-60 hover:opacity-100">Careers/Team</a>
+					<a href="#" class="opacity-60 hover:opacity-100">Contact Us</a>
+				</div>
+			</footer>
+			<!-- </FOOTER> -->
+		</div>
+		<!-- <AUTHOR> -->
+		<section class="text-center py-4 bg-darkestBlue mt-12 flex gap-1 justify-center">
+			<span class="opacity-60">Remade by</span>
+			<a
+				href="https://github.com/Yamsunsee/Midbank"
+				target="_blank"
+				class="font-bold text-orange flex items-center gap-1"
+			>
+				<ion-icon name="logo-github"></ion-icon>
+				Yam
+			</a>
+			<span class="opacity-60">in January 2022</span>
+		</section>
+		<!-- </AUTHOR> -->
+		<script>
+			const menuIcon = document.querySelector("#menuIcon")
+			const closeIcon = document.querySelector("#closeIcon")
+			const menu = document.querySelector("#menu")
+			const navLinks = menu.querySelectorAll("a")
 
-<body class="bg-primary text-white flex flex-col scroll-smooth select-none">
-  <!-- <HEADER> -->
-  <div class="w-full bg-darkestBlue">
-    <header
-      class="container m-auto p-4 font-primary grid grid-cols-header text-center items-center md:flex md:justify-between">
-      <ion-icon name="menu" class="text-2xl md:hidden"></ion-icon>
-      <div class="font-black text-xl sm:text-2xl">MidBank</div>
-      <div class="hidden md:flex lg:gap-12 font-semibold md:gap-4">
-        <a href="#" class="opacity-60 hover:opacity-100">Home</a>
-        <a href="#about" class="opacity-60 hover:opacity-100">About</a>
-        <a href="#services" class="opacity-60 hover:opacity-100">Services</a>
-        <a href="#app" class="opacity-60 hover:opacity-100">Mobile App</a>
-        <a href="#contact" class="opacity-60 hover:opacity-100">Contact</a>
-      </div>
-      <a href="#"
-        class="border-2 flex justify-center items-center gap-2 font-semibold py-1 md:px-4 md:py-2 rounded-full hover:bg-gradient-to-b hover:from-lightBlue hover:to-darkBlue hover:border-lightBlue">
-        <span class="hidden md:block">Sign in</span>
-        <ion-icon name="log-in-outline" class="text-2xl"></ion-icon>
-      </a>
-    </header>
-  </div>
-  <!-- </HEADER> -->
-  <div class="container m-auto p-4 md:p-8">
-    <!-- <HERO> -->
-    <section class="grid grid-cols-1 md:grid-cols-2 md:mt-20">
-      <img srcset="./src/images/image01.png 2x" alt="image" />
-      <div class="flex flex-col justify-center">
-        <h1 class="text-3xl lg:text-6xl font-bold sm:text-5xl">Stronger Banking, Greater Service</h1>
-        <p class="mt-8 opacity-60">Get the most accurate market data, alerts, conversions, tools and more — all within
-          the same app.</p>
-        <div class="mt-20 flex gap-4 flex-col text-center items-center sm:flex-row">
-          <a href="#"
-            class="w-fit font-semibold flex items-center gap-2 px-4 py-4 rounded-full border-lightBlue border-2 bg-gradient-to-b from-lightBlue to-darkBlue hover:from-transparent hover:to-transparent hover:border-white">Start
-            Transaction</a>
-          <a href="#"
-            class="w-fit border-2 flex items-center gap-2 font-semibold px-4 py-4 rounded-full hover:bg-gradient-to-b hover:from-lightBlue hover:to-darkBlue hover:border-lightBlue">
-            <ion-icon name="cloud-download-outline" class="text-2xl"></ion-icon>
-            <span>Download App</span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- </HERO> -->
-    <!-- <FEATURES> -->
-    <section class="flex flex-col items-center gap-8 mt-20 md:flex-row md:justify-around">
-      <div class="w-56 flex flex-col items-center text-center">
-        <div class="w-40 aspect-square flex justify-center items-center bg-lightBlue/10 rounded-lg">
-          <img srcset="./src/images/image02.png 2x" alt="image" />
-        </div>
-        <h3 class="mt-8 font-bold text-xl lg:text-2xl">Create an Account</h3>
-        <p class="opacity-60 mt-2">We realize ideas from simple to complex.</p>
-      </div>
-      <div class="w-56 flex flex-col items-center text-center">
-        <div class="w-40 aspect-square flex justify-center items-center bg-lightBlue/10 rounded-lg">
-          <img srcset="./src/images/image03.png 2x" alt="image" />
-        </div>
-        <h3 class="mt-8 font-bold text-xl lg:text-2xl">Attach Master Card</h3>
-        <p class="opacity-60 mt-2">Attach master card ideas from everything becomes.</p>
-      </div>
-      <div class="w-56 flex flex-col items-center text-center">
-        <div class="w-40 aspect-square flex justify-center items-center bg-lightBlue/10 rounded-lg">
-          <img srcset="./src/images/image04.png 2x" alt="image" />
-        </div>
-        <h3 class="mt-8 font-bold text-xl lg:text-2xl">Send money</h3>
-        <p class="opacity-60 mt-2">Send money ideas from simple to complex.</p>
-      </div>
-    </section>
-    <!-- </FEATURES> -->
-    <!-- <ABOUT> -->
-    <section id="about" class="scroll-mt-20 grid grid-cols-1 mt-20 items-center md:grid-cols-2">
-      <img srcset="./src/images/image05.png 2x" alt="image" />
-      <div>
-        <h4 class="text-orange font-bold mt-8 md:mt-0">ABOUT US</h4>
-        <h2 class="text-4xl font-bold">Wanna Know About MidBank Mobile Banking</h2>
-        <p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
-        <p class="opacity-60 mt-4">
-          Mobile banking is the act of making financial Money transactions on a mobile device (cell phone, tablet,
-          etc.).
-        </p>
-        <p class="opacity-60 mt-4">
-          This activity can be as simple as a bank sending fraud or usage activity to a client's cell phone or as
-          complex as a client paying bills or sending money abroad.
-        </p>
-        <h4 class="text-orange font-bold mt-4">LEARN MORE</h4>
-      </div>
-    </section>
-    <!-- </ABOUT> -->
-    <!-- <SERVICES> -->
-    <section id="services" class="scroll-mt-20 flex flex-col mt-20 md:items-center">
-      <h4 class="text-orange font-bold">SERVICE</h4>
-      <h2 class="text-4xl font-bold">Choose Best Service From Our List</h2>
-      <p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
-      <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 md:grid-cols-2 md:mt-20 md:gap-12">
-        <div
-          class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black">
-          <div
-            class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-red-500 group-hover:bg-red-100">
-            <img srcset="./src/images/image06.png 2x" alt="image" />
-          </div>
-          <h3 class="my-4 font-bold text-2xl">Personal Loan</h3>
-          <p class="text-gray-400 group-hover:text-black">
-            We realized ideas from simple to complex.
-            <a href="#" class="text-orange font-semibold">Read More</a>
-          </p>
-        </div>
-        <div
-          class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black">
-          <div
-            class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-blue-500 group-hover:bg-blue-100">
-            <img srcset="./src/images/image07.png 2x" alt="image" />
-          </div>
-          <h3 class="my-4 font-bold text-2xl">Business Loan</h3>
-          <p class="text-gray-400 group-hover:text-black">
-            We realized ideas from simple to complex.
-            <a href="#" class="text-orange font-semibold">Read More</a>
-          </p>
-        </div>
-        <div
-          class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black">
-          <div
-            class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-cyan-500 group-hover:bg-cyan-50">
-            <img srcset="./src/images/image08.png 2x" alt="image" />
-          </div>
-          <h3 class="my-4 font-bold text-2xl">Online Deposit</h3>
-          <p class="text-gray-400 group-hover:text-black">
-            We realized ideas from simple to complex.
-            <a href="#" class="text-orange font-semibold">Read More</a>
-          </p>
-        </div>
-        <div
-          class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black">
-          <div
-            class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-indigo-500 group-hover:bg-indigo-100">
-            <img srcset="./src/images/image09.png 2x" alt="image" />
-          </div>
-          <h3 class="my-4 font-bold text-2xl">Mobile Banking</h3>
-          <p class="text-gray-400 group-hover:text-black">
-            We realized ideas from simple to complex.
-            <a href="#" class="text-orange font-semibold">Read More</a>
-          </p>
-        </div>
-        <div
-          class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black">
-          <div
-            class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-purple-500 group-hover:bg-purple-100">
-            <img srcset="./src/images/image10.png 2x" alt="image" />
-          </div>
-          <h3 class="my-4 font-bold text-2xl">Credit Card</h3>
-          <p class="text-gray-400 group-hover:text-black">
-            We realized ideas from simple to complex.
-            <a href="#" class="text-orange font-semibold">Read More</a>
-          </p>
-        </div>
-        <div
-          class="group mx-auto w-72 aspect-square p-8 bg-white/10 rounded-lg flex flex-col justify-center items-center text-center hover:bg-white hover:text-black">
-          <div
-            class="w-24 aspect-square border border-opacity-50 rounded-full flex justify-center items-center group-hover:border-amber-500 group-hover:bg-amber-100">
-            <img srcset="./src/images/image11.png 2x" alt="image" />
-          </div>
-          <h3 class="my-4 font-bold text-2xl">Education Loan</h3>
-          <p class="text-gray-400 group-hover:text-black">
-            We realized ideas from simple to complex.
-            <a href="#" class="text-orange font-semibold">Read More</a>
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- </SERVICES> -->
-    <!-- <APP> -->
-    <section id="app"
-      class="-scroll-mt-8 grid grid-cols-1 md:grid-cols-2 mt-20 bg-white/10 px-4 py-20 lg:p-20 rounded-lg">
-      <div class="flex flex-col justify-center">
-        <h2 class="text-4xl font-bold">Secure Way To Buy And Sell From Your Mobile App</h2>
-        <p class="opacity-60 mt-4">
-          Gemini is a licensed New York trust company that monday under regular bank exams and is subject to the
-          cybersecurity audits conducted by the New York.
-        </p>
-        <div class="mt-8 md:mt-20 flex flex-col justify-center items-center gap-4 sm:flex-row">
-          <a href="#"
-            class="border-2 flex items-center gap-2 font-semibold px-4 py-2 rounded-full hover:bg-gradient-to-b hover:from-lightBlue hover:to-darkBlue hover:border-lightBlue">
-            <ion-icon name="logo-apple-appstore" class="text-4xl"></ion-icon>
-            <span>App Store</span>
-          </a>
-          <a href="#"
-            class="font-semibold flex items-center gap-2 px-4 py-2 rounded-full border-lightBlue border-2 bg-gradient-to-b from-lightBlue to-darkBlue hover:from-transparent hover:to-transparent hover:border-white">
-            <ion-icon name="logo-google-playstore" class="text-4xl"></ion-icon>
-            <span>Play Store</span>
-          </a>
-        </div>
-      </div>
-      <div class="flex justify-center mt-8 md:mt-0">
-        <img srcset="./src/images/image12.png 2x" alt="image" />
-      </div>
-    </section>
-    <!-- </APP> -->
-    <!-- <TESTIMONIAL> -->
-    <section class="grid grid-cols-1 md:grid-cols-testimonial items-center mt-20">
-      <a href="#" class="hidden md:block text-4xl text-darkBlue hover:text-white">
-        <ion-icon name="arrow-back-circle"></ion-icon>
-      </a>
-      <div class="flex justify-center p-8">
-        <img srcset="./src/images/image13.png 2x" alt="image" />
-      </div>
-      <div>
-        <h4 class="text-orange font-bold mt-8">TESTIMONIAL</h4>
-        <h2 class="text-4xl font-bold">Love Of Our Customers</h2>
-        <p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
-        <p class="opacity-60 mt-4">
-          In promotion and advertising, a testimonial or show consists of a person's written or spoken statement
-          extolling the virtue of a product. The term "testimonial" most commonly applies to the sales-pitches
-          attributed to ordinary citizens, whereas the word "endorsement" usually applies to pitches by celebrities.
-        </p>
-        <p class="mt-4 md:mt-20 font-semibold text-xl">Justin Pierre</p>
-        <p class="opacity-60">UX/UI Designer</p>
-      </div>
-      <a href="#" class="hidden md:flex text-4xl justify-end text-darkBlue hover:text-white">
-        <ion-icon name="arrow-forward-circle"></ion-icon>
-      </a>
-    </section>
-    <!-- </TESTIMONIAL> -->
-    <!-- <CONTACT> -->
-    <section id="contact"
-      class="scroll-mt-8 mt-20 bg-white/10 flex flex-col items-center p-4 md:p-20 rounded-lg lg:mx-20">
-      <h2 class="text-4xl font-bold">Subscribe Newsletter</h2>
-      <p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
-      <div class="mt-8 md:mt-20 flex flex-col md:flex-row gap-4 text-center">
-        <input type="text" placeholder="Enter your email"
-          class="p-4 rounded-full border-2 border-lightBlue sm:min-w-[20rem] outline-none bg-transparent" />
-        <a href="#"
-          class="w-fit font-semibold flex items-center gap-2 px-4 py-4 rounded-full border-lightBlue border-2 bg-gradient-to-b from-lightBlue to-darkBlue hover:from-transparent hover:to-transparent">Get
-          Started</a>
-      </div>
-    </section>
-    <!-- </CONTACT> -->
-    <!-- <FOOTER> -->
-    <footer class="mt-20 grid grid-cols-1 gap-12 md:grid-cols-footer">
-      <div>
-        <div class="font-black text-xl sm:text-2xl">MidBank</div>
-        <p class="opacity-60 mt-4">We operate our banking services in many countries around the world.</p>
-        <div class="mt-4 flex gap-4">
-          <a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
-            <img srcset="./src/images/image14.png 2x" alt="image" />
-          </a>
-          <a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
-            <img srcset="./src/images/image15.png 2x" alt="image" />
-          </a>
-          <a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
-            <img srcset="./src/images/image16.png 2x" alt="image" />
-          </a>
-          <a href="#" class="w-8 aspect-square hover:bg-white rounded-full flex justify-center items-center">
-            <img srcset="./src/images/image17.png 2x" alt="image" />
-          </a>
-        </div>
-      </div>
-      <div class="flex flex-col gap-4">
-        <h3 class="font-bold text-xl">Product</h3>
-        <a href="#" class="opacity-60 hover:opacity-100">Career</a>
-        <a href="#" class="opacity-60 hover:opacity-100">About Us</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Insights</a>
-        <a href="#" class="opacity-60 hover:opacity-100">PCI Compliance</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Integrations</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Pricing</a>
-      </div>
-      <div class="flex flex-col gap-4">
-        <h3 class="font-bold text-xl">Service</h3>
-        <a href="#" class="opacity-60 hover:opacity-100">Docs</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Knowledge Base</a>
-        <a href="#" class="opacity-60 hover:opacity-100">System Status</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Tutorials</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Security</a>
-      </div>
-      <div class="flex flex-col gap-4">
-        <h3 class="font-bold text-xl">FAQ</h3>
-        <a href="#" class="opacity-60 hover:opacity-100">About</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Leadership</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Press/News</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Careers/Team</a>
-        <a href="#" class="opacity-60 hover:opacity-100">Contact Us</a>
-      </div>
-    </footer>
-    <!-- </FOOTER> -->
-  </div>
-  <!-- <AUTHOR> -->
-  <section class="text-center py-4 bg-darkestBlue mt-12">
-    <span class="opacity-60">Rebuilt by</span>
-    <a href="#" class="font-bold text-orange">@Yam</a>
-  </section>
-  <!-- </AUTHOR> -->
-</body>
+			menuIcon.onclick = () => {
+				menu.style.transition = "ease-out 0.3s"
+				menu.style.transform = "translateX(0)"
+			}
 
+			closeIcon.onclick = () => {
+				menu.style.transform = "translateX(-100%)"
+				menu.style.transition = "ease-in 0.3s"
+			}
+
+			navLinks.forEach((navLink) => {
+				navLink.onclick = () => {
+					if (document.documentElement.clientWidth < 768) {
+						menu.style.transform = "translateX(-100%)"
+						menu.style.transition = "ease-in 0.3s"
+					}
+				}
+			})
+		</script>
+	</body>
 </html>
